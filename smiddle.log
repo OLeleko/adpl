@@ -1,0 +1,88 @@
+2022-06-25 13:44:31.046  INFO 2760 --- [main] com.smiddle.adpl.AdplApplication         : Starting AdplApplication using Java 1.8.0_281 on WS109 with PID 2760 (E:\projects\adpl\target\classes started by o.leleko in E:\projects\adpl)
+2022-06-25 13:44:31.048 DEBUG 2760 --- [main] com.smiddle.adpl.AdplApplication         : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-06-25 13:44:31.048  INFO 2760 --- [main] com.smiddle.adpl.AdplApplication         : No active profile set, falling back to 1 default profile: "default"
+2022-06-25 13:44:37.289  INFO 2760 --- [main] com.smiddle.adpl.AdplApplication         : Started AdplApplication in 7.141 seconds (JVM running for 12.271)
+2022-06-25 15:03:26.191  INFO 10200 --- [main] com.smiddle.adpl.AdplApplication         : Starting AdplApplication using Java 1.8.0_281 on WS109 with PID 10200 (E:\projects\adpl\target\classes started by o.leleko in E:\projects\adpl)
+2022-06-25 15:03:26.196 DEBUG 10200 --- [main] com.smiddle.adpl.AdplApplication         : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-06-25 15:03:26.198  INFO 10200 --- [main] com.smiddle.adpl.AdplApplication         : No active profile set, falling back to 1 default profile: "default"
+2022-06-25 15:03:27.822 DEBUG 10200 --- [main] c.smiddle.adpl.core.jtapi.ProviderUtil   : ProviderUtil
+2022-06-25 15:03:27.931  INFO 10200 --- [main] c.smiddle.adpl.core.jtapi.ProviderUtil   : ProviderUtilINITIALIZED
+2022-06-25 15:03:28.612  INFO 10200 --- [main] com.smiddle.adpl.core.jtapi.CallTracker  : Initializing provider...
+2022-06-25 15:03:29.135 DEBUG 10200 --- [main] com.smiddle.adpl.core.jtapi.CallTracker  : Provider initiated.
+2022-06-25 15:03:29.136 DEBUG 10200 --- [main] com.smiddle.adpl.core.jtapi.CallTracker  : Adding observers to the addresses...
+2022-06-25 15:03:29.136 DEBUG 10200 --- [main] com.smiddle.adpl.core.jtapi.CallTracker  : Observer added to the address: 7704
+2022-06-25 15:03:29.153  INFO 10200 --- [main] com.smiddle.adpl.core.jtapi.CallTracker  : INITIALIZED
+2022-06-25 15:03:29.555  INFO 10200 --- [main] com.smiddle.adpl.AdplApplication         : Started AdplApplication in 4.121 seconds (JVM running for 5.846)
+2022-06-25 15:03:36.467 DEBUG 10200 --- [ObserverThread(com.smiddle.adpl.core.jtapi.CallTracker@162c1dfb)] com.smiddle.adpl.core.jtapi.CallTracker  : ConnectCallEvent, calling:71890 called:7704 globalcallId:154102
+2022-06-25 15:03:38.427  INFO 10200 --- [ObserverThread(com.smiddle.adpl.core.jtapi.CallTracker@162c1dfb)] c.s.a.c.s.impl.RequestSendServiceImpl    : Send request <{"OperatorID":"7704","CallerID":"71890","CallStatus":"NewCall"},[Content-Type:"text/plain", Accept:"application/json", Authorization:"Bearer SC:adppro:358ed6f7fe3c5b5c"]>
+2022-06-25 15:03:51.062 DEBUG 10200 --- [ObserverThread(com.smiddle.adpl.core.jtapi.CallTracker@162c1dfb)] com.smiddle.adpl.core.jtapi.CallTracker  : DisconnectCallEvent, globalCallID=154102
+2022-06-25 15:03:51.062  INFO 10200 --- [ObserverThread(com.smiddle.adpl.core.jtapi.CallTracker@162c1dfb)] c.s.a.c.s.impl.RequestSendServiceImpl    : Send request <{"OperatorID":"7704","CallerID":"71890","CallStatus":"EndCall"},[Content-Type:"text/plain", Accept:"application/json", Authorization:"Bearer SC:adppro:358ed6f7fe3c5b5c"]>
+2022-06-25 15:06:07.444  INFO 10200 --- [SpringApplicationShutdownHook] com.smiddle.adpl.core.jtapi.CallTracker  : Shutting the provider down...
+2022-06-25 15:06:08.207 DEBUG 10200 --- [SpringApplicationShutdownHook] com.smiddle.adpl.core.jtapi.CallTracker  : Call observer removed from provider
+2022-06-25 16:22:39.705  INFO 1080 --- [main] com.smiddle.adpl.AdplApplication         : Starting AdplApplication using Java 1.8.0_281 on WS109 with PID 1080 (E:\projects\adpl\target\classes started by o.leleko in E:\projects\adpl)
+2022-06-25 16:22:39.711 DEBUG 1080 --- [main] com.smiddle.adpl.AdplApplication         : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-06-25 16:22:39.714  INFO 1080 --- [main] com.smiddle.adpl.AdplApplication         : No active profile set, falling back to 1 default profile: "default"
+2022-06-25 16:22:41.716 DEBUG 1080 --- [main] c.smiddle.adpl.core.jtapi.ProviderUtil   : ProviderUtil
+2022-06-25 16:22:41.878  INFO 1080 --- [main] c.smiddle.adpl.core.jtapi.ProviderUtil   : ProviderUtilINITIALIZED
+2022-06-25 16:22:42.665  INFO 1080 --- [main] com.smiddle.adpl.core.jtapi.CallTracker  : Initializing provider...
+2022-06-25 16:22:43.574 DEBUG 1080 --- [main] com.smiddle.adpl.core.jtapi.CallTracker  : Provider initiated.
+2022-06-25 16:22:43.574 DEBUG 1080 --- [main] com.smiddle.adpl.core.jtapi.CallTracker  : Adding observers to the addresses...
+2022-06-25 16:22:43.575 DEBUG 1080 --- [main] com.smiddle.adpl.core.jtapi.CallTracker  : Observer added to the address: 7704
+2022-06-25 16:22:43.589  INFO 1080 --- [main] com.smiddle.adpl.core.jtapi.CallTracker  : INITIALIZED
+2022-06-25 16:22:44.079  INFO 1080 --- [main] com.smiddle.adpl.AdplApplication         : Started AdplApplication in 5.297 seconds (JVM running for 8.498)
+2022-06-25 16:23:03.884 DEBUG 1080 --- [ObserverThread(com.smiddle.adpl.core.jtapi.CallTracker@35dece42)] com.smiddle.adpl.core.jtapi.CallTracker  : ConnectCallEvent, calling:71890 called:7704 globalcallId:154108
+2022-06-25 16:23:13.920  INFO 1080 --- [ObserverThread(com.smiddle.adpl.core.jtapi.CallTracker@35dece42)] c.s.a.c.s.impl.RequestSendServiceImpl    : Send request <{"OperatorID":"7704","CallerID":"71890","CallStatus":"NewCall"},[Content-Type:"text/plain", Accept:"application/json", Authorization:"Bearer SC:adppro:358ed6f7fe3c5b5c"]>
+2022-06-25 16:25:18.130 DEBUG 1080 --- [ObserverThread(com.smiddle.adpl.core.jtapi.CallTracker@35dece42)] com.smiddle.adpl.core.jtapi.CallTracker  : DisconnectCallEvent, globalCallID=154108
+2022-06-25 16:25:36.533  INFO 1080 --- [ObserverThread(com.smiddle.adpl.core.jtapi.CallTracker@35dece42)] c.s.a.c.s.impl.RequestSendServiceImpl    : Send request <{"OperatorID":"7704","CallerID":"71890","CallStatus":"EndCall"},[Content-Type:"text/plain", Accept:"application/json", Authorization:"Bearer SC:adppro:358ed6f7fe3c5b5c"]>
+2022-06-25 16:27:09.374  INFO 1080 --- [SpringApplicationShutdownHook] com.smiddle.adpl.core.jtapi.CallTracker  : Shutting the provider down...
+2022-06-25 16:28:27.655  INFO 9284 --- [main] com.smiddle.adpl.AdplApplication         : Starting AdplApplication using Java 1.8.0_281 on WS109 with PID 9284 (E:\projects\adpl\target\classes started by o.leleko in E:\projects\adpl)
+2022-06-25 16:28:27.661 DEBUG 9284 --- [main] com.smiddle.adpl.AdplApplication         : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-06-25 16:28:27.662  INFO 9284 --- [main] com.smiddle.adpl.AdplApplication         : No active profile set, falling back to 1 default profile: "default"
+2022-06-25 16:28:29.304 DEBUG 9284 --- [main] c.smiddle.adpl.core.jtapi.ProviderUtil   : ProviderUtil
+2022-06-25 16:28:29.411  INFO 9284 --- [main] c.smiddle.adpl.core.jtapi.ProviderUtil   : ProviderUtilINITIALIZED
+2022-06-25 16:28:30.040  INFO 9284 --- [main] com.smiddle.adpl.core.jtapi.CallTracker  : Initializing provider...
+2022-06-25 16:28:30.485 DEBUG 9284 --- [main] com.smiddle.adpl.core.jtapi.CallTracker  : Provider initiated.
+2022-06-25 16:28:30.486 DEBUG 9284 --- [main] com.smiddle.adpl.core.jtapi.CallTracker  : Adding observers to the addresses...
+2022-06-25 16:28:30.486 DEBUG 9284 --- [main] com.smiddle.adpl.core.jtapi.CallTracker  : Observer added to the address: 7704
+2022-06-25 16:28:30.500  INFO 9284 --- [main] com.smiddle.adpl.core.jtapi.CallTracker  : INITIALIZED
+2022-06-25 16:28:31.006  INFO 9284 --- [main] com.smiddle.adpl.AdplApplication         : Started AdplApplication in 4.06 seconds (JVM running for 5.836)
+2022-06-25 16:28:43.065 DEBUG 9284 --- [ObserverThread(com.smiddle.adpl.core.jtapi.CallTracker@35dece42)] com.smiddle.adpl.core.jtapi.CallTracker  : ConnectCallEvent, calling:71890 called:7704 globalcallId:154111
+2022-06-25 16:28:49.189  INFO 9284 --- [ObserverThread(com.smiddle.adpl.core.jtapi.CallTracker@35dece42)] c.s.a.c.s.impl.RequestSendServiceImpl    : Send request <{"OperatorID":"7704","CallerID":"71890","CallStatus":"NewCall"},[Content-Type:"text/plain", Accept:"application/json", Authorization:"Bearer SC:adppro:358ed6f7fe3c5b5c"]>
+2022-06-25 16:28:59.796 DEBUG 9284 --- [ObserverThread(com.smiddle.adpl.core.jtapi.CallTracker@35dece42)] com.smiddle.adpl.core.jtapi.CallTracker  : DisconnectCallEvent, globalCallID=154111
+2022-06-25 16:29:05.254  INFO 9284 --- [ObserverThread(com.smiddle.adpl.core.jtapi.CallTracker@35dece42)] c.s.a.c.s.impl.RequestSendServiceImpl    : Send request <{"OperatorID":"7704","CallerID":"71890","CallStatus":"EndCall"},[Content-Type:"text/plain", Accept:"application/json", Authorization:"Bearer SC:adppro:358ed6f7fe3c5b5c"]>
+2022-06-25 16:29:29.767  INFO 9284 --- [SpringApplicationShutdownHook] com.smiddle.adpl.core.jtapi.CallTracker  : Shutting the provider down...
+2022-06-25 16:29:30.070 DEBUG 9284 --- [SpringApplicationShutdownHook] com.smiddle.adpl.core.jtapi.CallTracker  : Call observer removed from provider
+2022-06-25 16:35:37.339  INFO 9792 --- [main] com.smiddle.adpl.AdplApplication         : Starting AdplApplication using Java 1.8.0_281 on WS109 with PID 9792 (E:\projects\adpl\target\classes started by o.leleko in E:\projects\adpl)
+2022-06-25 16:35:37.343 DEBUG 9792 --- [main] com.smiddle.adpl.AdplApplication         : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-06-25 16:35:37.344  INFO 9792 --- [main] com.smiddle.adpl.AdplApplication         : No active profile set, falling back to 1 default profile: "default"
+2022-06-25 16:35:38.968 DEBUG 9792 --- [main] c.smiddle.adpl.core.jtapi.ProviderUtil   : ProviderUtil
+2022-06-25 16:35:39.058  INFO 9792 --- [main] c.smiddle.adpl.core.jtapi.ProviderUtil   : ProviderUtilINITIALIZED
+2022-06-25 16:35:39.685  INFO 9792 --- [main] com.smiddle.adpl.core.jtapi.CallTracker  : Initializing provider...
+2022-06-25 16:35:40.160 DEBUG 9792 --- [main] com.smiddle.adpl.core.jtapi.CallTracker  : Provider initiated.
+2022-06-25 16:35:40.161 DEBUG 9792 --- [main] com.smiddle.adpl.core.jtapi.CallTracker  : Adding observers to the addresses...
+2022-06-25 16:35:40.161 DEBUG 9792 --- [main] com.smiddle.adpl.core.jtapi.CallTracker  : Observer added to the address: 7704
+2022-06-25 16:35:40.176  INFO 9792 --- [main] com.smiddle.adpl.core.jtapi.CallTracker  : INITIALIZED
+2022-06-25 16:35:40.674  INFO 9792 --- [main] com.smiddle.adpl.AdplApplication         : Started AdplApplication in 3.949 seconds (JVM running for 5.278)
+2022-06-25 16:35:49.867 DEBUG 9792 --- [ObserverThread(com.smiddle.adpl.core.jtapi.CallTracker@3c0bbc9f)] com.smiddle.adpl.core.jtapi.CallTracker  : ConnectCallEvent, calling:71890 called:7704 globalcallId:154114
+2022-06-25 16:35:51.577  INFO 9792 --- [ObserverThread(com.smiddle.adpl.core.jtapi.CallTracker@3c0bbc9f)] c.s.a.c.s.impl.RequestSendServiceImpl    : Send request <{"OperatorID":"7704","CallerID":"71890","CallStatus":"NewCall"},[Content-Type:"text/plain", Accept:"application/json", Authorization:"Bearer SC:adppro:358ed6f7fe3c5b5c"]>
+2022-06-25 16:35:57.717 DEBUG 9792 --- [ObserverThread(com.smiddle.adpl.core.jtapi.CallTracker@3c0bbc9f)] com.smiddle.adpl.core.jtapi.CallTracker  : DisconnectCallEvent, globalCallID=154114
+2022-06-25 16:35:57.721  INFO 9792 --- [ObserverThread(com.smiddle.adpl.core.jtapi.CallTracker@3c0bbc9f)] c.s.a.c.s.impl.RequestSendServiceImpl    : Send request <{"OperatorID":"7704","CallerID":"71890","CallStatus":"EndCall"},[Content-Type:"text/plain", Accept:"application/json", Authorization:"Bearer SC:adppro:358ed6f7fe3c5b5c"]>
+2022-06-25 16:37:47.497  INFO 9792 --- [SpringApplicationShutdownHook] com.smiddle.adpl.core.jtapi.CallTracker  : Shutting the provider down...
+2022-06-25 16:37:47.850 DEBUG 9792 --- [SpringApplicationShutdownHook] com.smiddle.adpl.core.jtapi.CallTracker  : Call observer removed from provider
+2022-06-25 16:37:56.820  INFO 5284 --- [main] com.smiddle.adpl.AdplApplication         : Starting AdplApplication using Java 1.8.0_281 on WS109 with PID 5284 (E:\projects\adpl\target\classes started by o.leleko in E:\projects\adpl)
+2022-06-25 16:37:56.823 DEBUG 5284 --- [main] com.smiddle.adpl.AdplApplication         : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-06-25 16:37:56.824  INFO 5284 --- [main] com.smiddle.adpl.AdplApplication         : No active profile set, falling back to 1 default profile: "default"
+2022-06-25 16:37:58.126 DEBUG 5284 --- [main] c.smiddle.adpl.core.jtapi.ProviderUtil   : ProviderUtil
+2022-06-25 16:37:58.226  INFO 5284 --- [main] c.smiddle.adpl.core.jtapi.ProviderUtil   : ProviderUtilINITIALIZED
+2022-06-25 16:37:58.757  INFO 5284 --- [main] com.smiddle.adpl.core.jtapi.CallTracker  : Initializing provider...
+2022-06-25 16:37:59.139 DEBUG 5284 --- [main] com.smiddle.adpl.core.jtapi.CallTracker  : Provider initiated.
+2022-06-25 16:37:59.140 DEBUG 5284 --- [main] com.smiddle.adpl.core.jtapi.CallTracker  : Adding observers to the addresses...
+2022-06-25 16:37:59.140 DEBUG 5284 --- [main] com.smiddle.adpl.core.jtapi.CallTracker  : Observer added to the address: 7704
+2022-06-25 16:37:59.152  INFO 5284 --- [main] com.smiddle.adpl.core.jtapi.CallTracker  : INITIALIZED
+2022-06-25 16:37:59.478  INFO 5284 --- [main] com.smiddle.adpl.AdplApplication         : Started AdplApplication in 3.23 seconds (JVM running for 4.517)
+2022-06-25 16:38:11.725 DEBUG 5284 --- [ObserverThread(com.smiddle.adpl.core.jtapi.CallTracker@c35af2a)] com.smiddle.adpl.core.jtapi.CallTracker  : ConnectCallEvent, calling:71890 called:7704 globalcallId:154117
+2022-06-25 16:38:13.339  INFO 5284 --- [ObserverThread(com.smiddle.adpl.core.jtapi.CallTracker@c35af2a)] c.s.a.c.s.impl.RequestSendServiceImpl    : Send request <{"OperatorID":"7704","CallerID":"71890","CallStatus":"NewCall"},[Content-Type:"text/plain", Accept:"application/json", Authorization:"Bearer SC:adppro:358ed6f7fe3c5b5c"]>
+2022-06-25 16:38:18.035 DEBUG 5284 --- [ObserverThread(com.smiddle.adpl.core.jtapi.CallTracker@c35af2a)] com.smiddle.adpl.core.jtapi.CallTracker  : DisconnectCallEvent, globalCallID=154117
+2022-06-25 16:38:18.037  INFO 5284 --- [ObserverThread(com.smiddle.adpl.core.jtapi.CallTracker@c35af2a)] c.s.a.c.s.impl.RequestSendServiceImpl    : Send request <{"OperatorID":"7704","CallerID":"71890","CallStatus":"EndCall"},[Content-Type:"text/plain", Accept:"application/json", Authorization:"Bearer SC:adppro:358ed6f7fe3c5b5c"]>
+2022-06-25 16:39:24.879  INFO 5284 --- [SpringApplicationShutdownHook] com.smiddle.adpl.core.jtapi.CallTracker  : Shutting the provider down...
+2022-06-25 16:39:25.269 DEBUG 5284 --- [SpringApplicationShutdownHook] com.smiddle.adpl.core.jtapi.CallTracker  : Call observer removed from provider
