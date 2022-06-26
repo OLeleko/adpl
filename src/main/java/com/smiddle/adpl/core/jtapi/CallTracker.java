@@ -5,6 +5,7 @@ import com.smiddle.adpl.core.service.RequestSendService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -175,4 +176,16 @@ public class CallTracker implements CallControlCallObserver {
         sb.append("\"CallStatus\":").append("\"").append(callPhase).append("\"").append("}");
         return sb.toString();
     }
+    @Scheduled(initialDelay = 60 * 60 * 1000, fixedDelay = 60 * 60 * 1000)
+    private void timeoutUpdate() {
+        clearProvider();
+        initProvider();
+        addObservers();
+    }
+    @Scheduled(cron = "0 0 1 * * *")
+    private void listsClear(){
+        connectId.clear();
+        disconnectId.clear();
+    }
+
 }
