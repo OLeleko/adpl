@@ -16,17 +16,14 @@ import java.util.Collections;
 @RequiredArgsConstructor
 public class RequestSendServiceImpl implements RequestSendService {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
-
     private final RestTemplate restTemplate;
-
     @Value("${iviva.url}")
     private String ivivaUrl;
-
     @Value("${iviva.token}")
     private String ivivaToken;
-
     @Override
-    public void sendRequest(String content) {
+    public void sendRequest(String content, String urlEndPart) {
+        String finalIvivaUrl = ivivaUrl + urlEndPart;
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.TEXT_PLAIN);
         headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
@@ -34,16 +31,10 @@ public class RequestSendServiceImpl implements RequestSendService {
         HttpEntity<String> requestEntity = new HttpEntity<>(content, headers);
         logger.info("Send request " + requestEntity);
         try {
-            ResponseEntity<String> entity = restTemplate.postForEntity(ivivaUrl, requestEntity, String.class);
-            /*if(entity.getStatusCode() == HttpStatus.OK){
-                logger.info("Get response OK");
-            }else{
-                logger.error(entity.getStatusCode().toString());
-            }*/
+            ResponseEntity<String> entity = restTemplate.postForEntity(finalIvivaUrl, requestEntity, String.class);
             logger.info("Responese status code: " + entity.getStatusCode());
         } catch (RestClientException e) {
             logger.error("Request error: " + e);
         }
-
     }
 }
