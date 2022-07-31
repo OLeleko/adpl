@@ -132,9 +132,9 @@ public class CallTracker implements CallControlCallObserver {
             } else {
                 callRegister.put(globalCallID, secondConnectCallEvent);
                 logger.debug("Second ConnectCallEvent, calling:" + callingAddress + " called:" + calledAddress + " globalcallId:" + globalCallID);
-                String content = toStringContent(callingAddress, calledAddress, newCall);
-                requestSendService.sendRequest(content, newCallUrl);
-                logger.debug("ConnectCallEvent, request content: " + content);
+                Map<String, String> mapContent = toMapContent(callingAddress, calledAddress, newCall);
+                requestSendService.sendRequest(mapContent, newCallUrl);
+                logger.debug("ConnectCallEvent, request content: " + mapContent);
             }
         }
     }
@@ -147,9 +147,9 @@ public class CallTracker implements CallControlCallObserver {
             Integer eventOrder = callRegister.get(globalCallID);
             logger.debug("First DisconnectCallEvent, globalCallID=" + globalCallID);
             if (eventOrder == secondConnectCallEvent) {
-                String content = toStringContent(callingAddress, calledAddress, endCall);
-                requestSendService.sendRequest(content, endCallUrl);
-                logger.debug("DisconnectCallEvent, request content: " + content);
+                Map<String, String> mapContent = toMapContent(callingAddress, calledAddress, endCall);
+                requestSendService.sendRequest(mapContent, endCallUrl);
+                logger.debug("DisconnectCallEvent, request content: " + mapContent);
                 callRegister.remove(globalCallID);
             } else {
                 callRegister.remove(globalCallID);
@@ -158,16 +158,17 @@ public class CallTracker implements CallControlCallObserver {
         }
     }
 
-    private String toStringContent(String callingAddress, String calledAddress, String callPhase) {
-        StringBuilder sb = new StringBuilder("{");
-        sb.append("\"OperatorID\":").append("\"").append(calledAddress).append("\"").append(",");
-        sb.append("\"CallerID\":").append("\"").append(callingAddress).append("\"").append(",");
-        sb.append("\"CallStatus\":").append("\"").append(callPhase).append("\"").append("}");
-        return sb.toString();
+    private Map<String, String> toMapContent(String callingAddress, String calledAddress, String callPhase){
+        Map<String, String> mapContent = new HashMap<>();
+        mapContent.put("OperatorID", calledAddress);
+        mapContent.put("CallerID", callingAddress);
+        mapContent.put("CallStatus", callPhase);
+        return mapContent;
     }
 
     @Scheduled(initialDelay = 60 * 60 * 1000, fixedDelay = 60 * 60 * 1000)
     private void timeoutUpdate() {
+        logger.debug("Scheduled provider update.");
         clearProvider();
         initProvider();
         addObservers();

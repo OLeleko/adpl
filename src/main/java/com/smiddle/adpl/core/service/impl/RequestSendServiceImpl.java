@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Collections;
+import java.util.Map;
 
 @Service
 @RequiredArgsConstructor
@@ -22,13 +23,13 @@ public class RequestSendServiceImpl implements RequestSendService {
     @Value("${iviva.token}")
     private String ivivaToken;
     @Override
-    public void sendRequest(String content, String urlEndPart) {
+    public void sendRequest(Map<String, String> content, String urlEndPart) {
         String finalIvivaUrl = ivivaUrl + urlEndPart;
         HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.TEXT_PLAIN);
+        headers.setContentType(MediaType.APPLICATION_JSON);
         headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
-        headers.setBearerAuth(ivivaToken);
-        HttpEntity<String> requestEntity = new HttpEntity<>(content, headers);
+        headers.set("Authorization", ivivaToken);
+        HttpEntity<Map<String, String>> requestEntity = new HttpEntity<>(content, headers);
         logger.info("Send request " + requestEntity);
         try {
             ResponseEntity<String> entity = restTemplate.postForEntity(finalIvivaUrl, requestEntity, String.class);
