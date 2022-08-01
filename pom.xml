@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.smiddle</groupId>
     <artifactId>adpl</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>adpl</name>
     <description>adpl</description>
     <properties>
