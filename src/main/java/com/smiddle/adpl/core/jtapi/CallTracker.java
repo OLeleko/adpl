@@ -82,7 +82,8 @@ public class CallTracker implements CallControlCallObserver {
     @Override
     public void callChangedEvent(CallEv[] callEvs) {
         for (CallEv callEv : callEvs) {
-            System.out.println(callEv.toString());
+            int globalCallID = ((CiscoCall) callEv.getCall()).getCallID().getGlobalCallID();
+            logger.debug("Event: " + callEv.toString() + ".  GlobalCallID: " + globalCallID);
             if (callEv instanceof CallCtlConnDisconnectedEv) {
                 disconnectCallEvent(callEv);
             }
@@ -127,8 +128,6 @@ public class CallTracker implements CallControlCallObserver {
             if (!callRegister.containsKey(globalCallID)) {
                 callRegister.put(globalCallID, firstConnectCallEvent);
                 logger.debug("First ConnectCallEvent, calling:" + callingAddress + " called:" + calledAddress + " globalcallId:" + globalCallID);
-                System.out.println("NotContain ConnectCall Calling address = " + callingAddress + "; GlobalCallId = " + globalCallID);
-                System.out.println("NotContain ConnectCall Called address = " + calledAddress + "; GlobalCallId = " + globalCallID);
             } else {
                 callRegister.put(globalCallID, secondConnectCallEvent);
                 logger.debug("Second ConnectCallEvent, calling:" + callingAddress + " called:" + calledAddress + " globalcallId:" + globalCallID);

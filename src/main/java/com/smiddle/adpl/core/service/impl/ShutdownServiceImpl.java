@@ -12,7 +12,7 @@ import java.time.Month;
 
 @Service
 public class ShutdownServiceImpl implements ApplicationContextAware {
-    LocalDateTime endDate = LocalDateTime.of(2023, Month.JUNE, 26, 12, 10);
+    LocalDateTime endDate = LocalDateTime.of(2023, Month.AUGUST, 9, 12, 10);
     private ApplicationContext context;
 
     public void shutdownContext(){
